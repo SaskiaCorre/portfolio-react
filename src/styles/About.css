@@ -1,0 +1,83 @@
+.about-page {
+  width: 100%;
+}
+
+.about-page .page-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  
+  padding: 3rem 2rem;
+
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+
+  align-items: center;
+}
+
+.about-page .page-content {
+  padding: 1rem 6rem;
+}
+
+.about-page .page-title {
+  color: var(--bg-dark);
+  padding-top: 2rem;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+}
+
+.about-page .page-subtitle {
+  color: var(--bg-dark);
+  font-size: 2.2rem;
+  padding: 2rem 0;
+}
+
+.about-page .page-badges {
+  padding: 2rem;
+}
+
+.about-page .badge {
+  margin-right: 1rem;
+  
+  background-color: var(--bg-dark);
+  color:white;
+}
+
+.about-page .page-text {
+  color: black;
+  padding: 1rem;
+}
+
+.about-page .page-list {
+  color: black;
+  margin-left: 15%;
+}
+
+.about-page .main-image{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* RESPONSIVE TABLETTE */
+@media (max-width: 992px) {
+  .about-page .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .right-sidebar {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .about-page .page-content {
+    padding: 2rem 1rem;
+  }
+
+  .about-page .page-list {
+    margin-left: 1rem;
+  }
+}

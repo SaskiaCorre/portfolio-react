@@ -1,0 +1,258 @@
+.home-page {
+  width: 100%;
+}
+
+/* HERO LAYOUT TAILLE IDEALE : */
+.home-page .hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;  
+
+  min-height: 70vh;
+  padding: 3rem 8%;
+
+  background-color: var(--bg-light);
+  color: var(--color-bg);
+}
+
+.home-page .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page .hero-title {
+  padding: 2rem 0;
+
+  color: var(--bg-dark);
+  font-size: 3.1rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.home-page .hero-subtitle {
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.home-page .page-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.home-page .hero-text {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+
+  max-width: 700px;
+  padding: 1rem;
+}
+
+.home-page .hero-cta {
+  display: block;
+  width: fit-content;
+
+  padding: 1rem 2rem;
+  margin: 1rem auto 0;
+
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+
+  border-radius: var(--radius);
+}
+
+.home-page .hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-page .link {
+  text-decoration: none;
+}
+
+.page-layout,
+.projects-preview,
+.about-preview,
+.contact-preview {
+margin: 0 auto;
+padding: 0 1rem;
+}
+
+.home-page .page-content {
+  /* padding: 1rem 6rem; */
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  padding: 10rem 10rem 1rem;
+  text-align: center;
+}
+
+.home-page .page-title {
+  color: var(--bg-dark);
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.1;
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+
+/* EXPERIENCES */
+
+.xp-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 3rem 1rem;
+
+  text-align: center;
+}
+
+.card-experience {
+  padding: 1.5rem;
+  border: 1px solid #dce8dc;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px var(--bg-dark, 0.08);
+  text-align: center;
+  background-color: #fff;
+}
+
+/* ABOUT PREVIEW */
+.about-preview {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  gap: 3rem;
+
+  padding: 3rem 8%;
+
+  background-color: var(--color-text);
+}
+
+.home-page .about-preview .main-image{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-title-bis {
+  color: var(--bg-dark);
+  font-size: var(--font-subtitle);
+  padding: 1rem 0;
+}
+
+.page-text {
+  color: black;
+  padding: 0.75rem;
+  line-height: 1.7;
+}
+
+.home-page .page-cta {
+  margin-top: 3rem;
+  padding: 15px;
+
+  border: solid 1px var(--bg-dark);
+  background-color: var(--bg-dark);
+  border-radius: var(--radius);
+}
+
+ /*CONTACT PREVIEW  */
+.contact-preview {
+  text-align: center;
+  padding: 5rem 8%; 
+}
+
+/* RESPONSIVE TABLETTE */
+@media (max-width: 992px) { 
+  .home-page .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    
+    min-height: auto;
+    padding: 4rem 6%;
+  }
+
+  .home-page .hero-image img {
+    /* max-width: 500px; */
+    display: none;
+  }
+
+  .home-page .xp-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-page .about-preview {
+    flex-direction: column;
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  /* HERO */
+  .home-page .hero-layout {
+    padding: 3rem 1.5rem;
+  }
+
+  .home-page .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .home-page .hero-text {
+    font-size: 1rem;
+  } 
+
+  .home-page .xp-container {
+    grid-template-columns: 1fr;
+
+    width: min(400px, 90%);
+    gap: 1.5rem;
+
+    padding: 2rem 0;
+  } 
+
+  /* .home-page .hero-image img {
+    max-width: 90%;
+  }
+
+  .home-page .hero-cta {
+    padding: 1rem 1.5rem;
+  }
+
+  .home-page .about-preview {
+    padding: 3rem 1rem;
+  }
+
+  /* .home-page .about-preview .main-image {
+    max-width: 90%;
+  }
+
+  .home-page .page-content {
+    padding: 3rem 1rem 1rem;
+  }
+
+  .home-page .page-title {
+    font-size: 2.5rem;
+  }
+
+  .home-page .page-title-bis {
+    font-size: 1.8rem;
+  }
+
+  .home-page .page-text {
+    font-size: 1rem;
+  } */
+
+  .home-page .contact-preview {
+    padding: 3rem 1rem;
+  }
+
+  .home-page .page-badges {
+    padding: 1rem;
+  }
+}

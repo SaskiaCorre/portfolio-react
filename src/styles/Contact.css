@@ -1,0 +1,114 @@
+.contact-page {
+  width: 100%;
+}
+
+.contact-page .page-layout {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 3rem;
+
+  padding: 3rem 2rem;
+
+  background-color: var(--bg-light);
+}
+
+.contact-page .page-content {
+  padding: 1rem 6rem;
+  font-size: 1.2rem;
+}
+
+.contact-page .page-title {
+  color: var(--bg-dark);
+  padding-top: 2rem;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.contact-page .page-subtitle {
+  color: var(--bg-dark);
+}
+
+.contact-page .page-badges {
+  padding: 2rem;
+}
+
+.contact-page .badge {
+  margin-right: 1rem;
+  background-color: var(--bg-dark);
+  color:white;
+}
+
+/* FORMULAIRE */
+.form-layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-container {
+  width: min(450px, 100%);
+}
+
+.form {
+  width: 100%;
+  padding: 15px;
+
+  border: 2px solid var(--bg-dark);
+  border-radius: var(--radius);
+
+  background-color: var(--color-text);
+  color: var(--bg-dark);
+}
+
+.form-case {
+  display: flex;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-top: 2rem;
+  padding: 15px;
+
+  background-color: var(--bg-light);
+  border: 2px solid var(--bg-dark);
+  border-radius: var(--radius);
+  color: var(--bg-dark);
+}
+
+.submit-btn {
+  display: block;
+
+  width: 50%;
+  margin: 2rem auto 0;
+  padding: 15px;
+
+  background-color: var(--bg-dark);
+  border: 2px solid var(--bg-dark);
+  border-radius: var(--radius);
+
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE TABLETTE */
+@media (max-width: 992px) {
+  .contact-page .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .page-content {
+    padding: 1rem 3rem;
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .contact-page .page-content {
+    padding: 1rem;
+  }
+  
+  .form-container {
+    width: min(450px, 95%);
+  }
+}

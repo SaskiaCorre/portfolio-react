@@ -1,0 +1,213 @@
+.projects-page {
+  width: 100%;
+}
+
+/* HERO */
+.projects-page .hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 60vh;
+  padding: 1rem 8%;
+  background-color: var(--bg-light);
+  color: var(--color-bg);  
+}
+
+.projects-page .hero-subtitle {
+  font-size: 2.2rem;
+  /* color: var(--bg-dark); */
+  padding: 3rem 3rem 0;
+}
+
+.projects-page .hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-page .hero-title {
+  margin-bottom: 4rem;
+  color: var(--bg-dark);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.projects-page .hero-text {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.projects-page .hero-cta {
+  border: solid 2px var(--bg-dark);
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 50px;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--bg-dark);
+  border-radius: var(--radius);  
+}
+
+.projects-page .hero-cta .link {
+  color: white;
+  text-decoration: none;
+}
+
+.projects-page .hero-image {
+  display: flex;
+  justify-content: center;
+} 
+
+.projects-page .hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+}
+
+
+/* LISTE DES PROJETS */
+.projects-page > section:not(.hero-layout) {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.one-project {
+  width: 100%;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.one-project-title {
+  margin-bottom: 1rem;
+  color: var(--bg-dark);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+}
+
+.one-project-cta {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.project-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+  margin: 0 auto 2.5rem;
+}
+
+.project-preview a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.grid-card {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 280px;
+  margin: 0 auto;
+  padding: 1rem;
+  object-fit: contain;
+  background-color: white;
+  border: 1px solid #dce8dc;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* SURVOL SOURIS */
+.project-preview a:hover .grid-card {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* RESPONSIVE TABLETTE */
+@media (max-width: 992px) {
+    .projects-page .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    min-height: auto;
+    padding: 4rem 6%;
+  }
+
+  .projects-page .hero-image {
+    /* order: -1; */
+    display: none;
+  }
+
+  .projects-page .hero-image img {
+    max-width: 450px;
+  }  
+
+  .projects-page .project-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .one-project {
+    padding: 2.5rem 1.5rem;
+    justify-items: center;
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .projects-page .hero-layout {
+    padding: 3rem 1.25rem;
+  }
+
+  .projects-page .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .projects-page .hero-text {
+    font-size: 1rem;
+  }
+
+  .projects-page .hero-image img {
+    max-width: 100%;
+  }
+
+  .one-project {
+    width: 92%;
+    margin: 2.5rem auto;
+    padding: 2rem 1rem;
+    border-radius: 14px;
+  }
+
+  .one-project-title {
+    font-size: 1.5rem;
+  }
+
+  .one-project-cta {
+    font-size: 1rem;
+  }
+
+  .projects-page .project-preview {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .grid-card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+}
+}

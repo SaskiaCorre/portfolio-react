@@ -1,0 +1,763 @@
+.details-page {
+  width: 100%;
+}
+
+/* HERO */
+/* LAYOUT TAILLE IDEALE : */
+.details-page .hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+
+  min-height: 50vh;
+  padding: 3rem 9rem;
+  margin-bottom: 2rem;
+
+  background-color: var(--bg-light);
+  color: var(--color-bg);
+  align-items: center;
+}
+
+.details-page .hero-content {
+  justify-items: center;
+  text-align: center;
+}
+
+.details-page .hero-title {
+  color: var(--bg-dark);
+  font-size: 2rem;
+  line-height: 1.1;
+  padding: 2rem;
+}
+
+.details-page .hero-subtitle {
+  font-size: 2.2rem;
+  padding: 3rem 3rem 0;
+}
+
+.details-page .page-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+}
+
+.details-page .hero-text {
+  max-width: 600px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.details-page .hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-page .hero-image img{
+  display: block;
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+}
+
+.details-page .hero-cta {
+  padding: 2rem;
+  background-color: var(--bg-dark);
+  color: var(--bg-light); 
+  border-radius: var(--radius);
+  margin-top:2rem ; 
+  margin-left: 2rem; 
+  width: 30%;
+  margin-left: 15rem;
+}
+
+/* PROJET */
+.details-page .project-details {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.section-title {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.45rem 1.2rem;
+
+  background: var(--bg-dark);
+  color: white;
+
+  border-radius: 99px;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.section-type {
+  border: solid 2px var(--bg-dark);
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  justify-self: left;
+}
+
+.section-description {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.context,
+.objective,
+.approach,
+.feature,
+.datamodel,
+/* .diagram, */
+.model, 
+.gallery {
+  padding: 5rem 0;
+}
+
+/* CONTEXT */
+.context {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.approach,
+.feature {
+  text-align: center;
+}
+
+.context-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.context-card {
+  padding: 1.5rem;
+  border: 1px solid #dce8dc;
+  border-radius: 10px;
+  text-align: center;
+  background: #fff;
+}
+
+/* OBJECTIVES */
+
+.objective {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.objectives-grid,
+.approach-grid,
+.features-grid, 
+.data-choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.objective-card {
+  padding: 2rem;
+  border: 1px solid #dce8dc;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* APPROACH */
+.approach {
+  text-align: center;
+}
+
+/* .approach-grid {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:2rem;
+} */
+
+.approach-card {
+  margin: 0;
+  padding: 2rem;
+  border-left: 4px solid var(--bg-dark);
+  background: #f8fbf8;
+  text-align: left;
+}
+
+/* FEATURES */
+.feature {
+  text-align: center;
+}
+
+/* .features-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  padding: 0;
+} */
+
+.feature-card{
+  min-height: 130px;
+  padding: 1.5rem;
+  border: 1px solid #dce8dc;
+  border-radius: 12px;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon,
+.datamodel-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--bg-dark);  
+}
+
+.feature-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.feature-content{
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* DATA MODEL / MLD - MCD */
+.datamodel {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.datamodel .section-title {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.datamodel .section-description {
+  margin-bottom: 3rem;
+}
+
+/* Schémas */
+.datamodel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.datamodel-card {
+  padding: 2rem;
+  border: 1px solid #dce8dc;
+  border-radius: 14px;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.datamodel-card h3 {
+  margin-bottom: 1.5rem;
+  color: var(--bg-dark);
+  font-size: 1.2rem;
+}
+
+/* Images MLD / MCD */
+.datamodel-card .grid-img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+
+/* Sous-titre */
+.datamodel-subtitle {
+  margin: 4rem auto 2rem;
+  font-size: 1.4rem;
+}
+
+
+/* Choix de conception */
+.data-choices { 
+  display:grid;  
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  /* padding: 0; */
+}
+
+.data-choices .datamodel-card { 
+  min-height: 130px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.data-choices .datamodel-card .datamodel-subtitle {
+  margin: 0.75rem 0;
+  font-size:1.2rem;
+  font-weight:700;
+}
+
+.data-choices .datamodel-card .datamodel-title {
+  color: black;
+}
+
+.data-choices .section-description {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Diagram */
+.diagram {
+  /* text-align: center; */
+  padding: 2rem;
+
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+}
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.diagram-card {
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  background-color: #f9f9f9;
+} 
+
+.diagram-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* Model */
+.model {
+  text-align: center;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.model-card {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.model-card .card-img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  /* height: auto; */
+  margin: 0 auto;
+}
+
+.cta-btn {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--bg-dark);
+}
+
+.link-to{
+  color: white;
+  font-size: 1rem;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.gallery-card {
+  /* margin: 0; */
+  padding: 1rem;
+
+  background: white;
+  border: 1px solid #dce8dc;
+  border-radius: 14px;
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-title {
+  color: var(--bg-dark);
+}
+
+.img-description {
+  margin: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+.details-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.details-img,
+.card-img,
+.grid-img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.details-img:hover,
+.card-img:hover,
+.grid-img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   APPRENTISSAGE / BILAN
+========================= */
+
+.project-learning {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.project-learning .skills,
+.project-learning .challenges {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #dce8dc;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.project-learning .section-title {
+  margin-bottom: 1rem;
+}
+
+.project-learning .section-description {
+  padding: 0;
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* LISTE */
+
+.project-learning .list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-learning .list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Icône SlArrowDown */
+.project-learning .list-icon {
+  flex-shrink: 0;
+  color: var(--bg-dark);
+  font-size: 0.8rem;
+}
+
+/* CONCLUSION */
+
+.conclusion {
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+  text-align: center;
+}
+
+.conclusion .section-description {
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+
+/* LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+
+.lightbox-content {
+  position: relative;
+
+  max-width: 90vw;
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: default;
+}
+
+
+.lightbox-content img {
+  max-width: 90vw;
+  max-height: 80vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+
+.lightbox-content p {
+  margin-top: 1rem;
+
+  color: white;
+  text-align: center;
+}
+
+
+.lightbox-close {
+  position: absolute;
+
+  top: -45px;
+  right: -10px;
+
+  border: none;
+  background: transparent;
+  color: white;
+
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.git-btn {
+  display: block;
+  width: 15rem;
+  min-height: 5rem;
+
+  margin: 0 auto 50px;
+  padding: 1rem;
+
+  border: 1px solid var(--bg-dark);
+  border-radius: 20px;
+
+  background-color: var(--bg-dark);
+}
+
+.git-link{
+  color: white;
+  font-size: 1rem;
+}
+
+.git-icon {
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE TABLETTE */
+@media (max-width: 992px) {
+  /* HERO */
+
+  .details-page .hero-layout {
+    grid-template-columns: 1fr;
+    /* gap: 2rem;
+    min-height: auto; */
+    padding: 4rem 6%;
+  }
+
+  .details-page .hero-image {
+    display: none;
+  }
+
+  /* GRILLES */
+
+  .context-grid,
+  .objectives-grid,
+  .approach-grid,
+  .features-grid,
+  .datamodel-grid,
+  .data-choices,
+  .diagram-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-details {
+    width: min(1100px, 92%);
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  /* HERO */
+  .details-page .hero-layout {
+    padding: 3rem 1.25rem;
+  }
+
+  .details-page .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .details-page .hero-subtitle {
+    font-size: 1.8rem;
+    padding: 2rem 1rem;
+  }
+
+  .details-page .hero-text {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .details-page .page-badges {
+    padding: 1rem;
+  }
+
+  /* SECTIONS */
+  .context,
+  .objective,
+  .approach,
+  .feature,
+  .datamodel,
+  .diagram,
+  .model,
+  .gallery {
+    padding: 3rem 0;
+  }
+
+  .section-description {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* GRILLES */
+  .context-grid,
+  .objectives-grid,
+  .approach-grid,
+  .features-grid,
+  .datamodel-grid,
+  .gallery-grid,
+  .diagram-grid
+  .data-choices{ 
+    grid-template-columns: 1fr;
+    /* gap: 1.5rem; */
+  }
+
+
+  /* CARTES */
+
+  .context-card,
+  .objective-card,
+  .approach-card,
+  .feature-card,
+  .datamodel-card,
+  .diagram-card,
+  .model-card,
+  .gallery-card {
+    padding: 1.5rem;
+  }
+
+  .project-learning {
+    grid-template-columns: 1fr;
+    width: min(500px, 92%);
+    gap: 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .project-learning .skills,
+  .project-learning .challenges {
+    padding: 1.5rem;
+  }
+
+  .project-learning .section-description {
+    font-size: 0.95rem;
+  }
+
+  .conclusion {
+    width: min(500px, 92%);
+    padding: 1rem 0 3rem;
+  }
+
+  .conclusion .section-description {
+    font-size: 1rem;
+  }
+  /* GITHUB */
+
+  .git-btn {
+    width: min(15rem, 80%);
+  }
+}
