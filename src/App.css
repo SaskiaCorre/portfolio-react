@@ -1,5 +1,6 @@
 article {
     background-color: var(--bg-light);
+    color: var(--text-main);
 }
 
 section {
@@ -8,14 +9,18 @@ section {
 
 /* HEADER */
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 120px;
+  padding: 1rem 3rem;
 
-    height: 120px;
-    padding: 1rem 3rem;
+  background-color: var(--header-bg);
+  color: var(--text-main);
 
-    background: var(--color-text);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .logo {
@@ -26,21 +31,24 @@ header {
 
 .nav-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    gap: 1rem; 
+    gap: 1rem;
+    flex-wrap: wrap; 
 }
 
 .nav-link {
-    padding: 8px 12px;
-    margin-right: 20px;
+  padding: 8px 12px;
+  margin-right: 0;
 
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
 
-    border-radius: 5px;
-    transition: 0.3s;
+  border-radius: 5px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .nav-link:hover, 
@@ -49,18 +57,78 @@ header {
     background: var(--bg-dark);
 }
 
+/* BOUTON LIGHT / DARK MODE */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+
+  background-color: var(--surface-alt);
+  color: var(--text-main);
+
+  font: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--bg-dark);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--bg-dark);
+  outline-offset: 3px;
+}
+
+.theme-toggle svg {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+:is(
+  .card-experience,
+  .context-card,
+  .objective-card,
+  .application-card,
+  .feature-card,
+  .datamodel-card,
+  .diagram-card,
+  .model-card,
+  .gallery-card,
+  .skills,
+  .challenges,
+) {
+  background-color: var(--surface-bg);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
 /* FOOTER */
 footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
 
-    min-height: 180px;
-    padding: 2rem;
+  min-height: 180px;
+  padding: 2rem;
 
-    background: var(--color-text);
-    color: var(--color-bg);
-    text-align: center;
+  background-color: var(--footer-bg);
+  color: var(--text-main);
+  text-align: center;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
 .footer-socials {
@@ -115,7 +183,6 @@ a:hover {
   gap: 5rem;
 
   min-height: 50vh;
-  /* padding: 3rem 9rem; */
 
   background-color: var(--color-text);
   align-items: center;
@@ -140,8 +207,6 @@ a:hover {
 .page-error .hero-image {
   display: flex;
   justify-content: center;
-  /* margin-top: 5rem;
-  margin-bottom: 6rem; */
 }
 
 .page-error .hero-image img{
@@ -189,11 +254,4 @@ a:hover {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-
-    /* .footer-socials {
-        display: flex;
-        gap: 1rem;
-        
-        justify-content: center;
-    } */
 }

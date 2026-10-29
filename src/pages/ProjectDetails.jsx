@@ -32,8 +32,8 @@ export default function ProjectDetails({project}){
     <h2 className='hero-subtitle'>{projectDetails.hero.subtitle}</h2>
       <Hero
         // subtitle={projectDetails.hero.subtitle} 
-        badges={projectDetails.hero.badges}
         title={projectDetails.hero.title}
+        badges={projectDetails.hero.badges}
         content={projectDetails.hero.content}
         cta={projectDetails.hero.cta}
         image={<img src={projectDetails.hero.image} alt="" />}

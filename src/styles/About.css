@@ -44,12 +44,16 @@
 }
 
 .about-page .page-text {
-  color: black;
+  color: var(--text-main);
+  border-color: var(--border-color);
+  
   padding: 1rem;
 }
 
 .about-page .page-list {
-  color: black;
+  color: var(--text-main);
+  border-color: var(--border-color);
+  
   margin-left: 15%;
 }
 

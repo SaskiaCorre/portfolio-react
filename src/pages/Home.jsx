@@ -1,25 +1,18 @@
-// import '../styles/Hero.css';
 import '../styles/Home.css';
 import '../App.css';
 
-import React from 'react';
 import Card from '../components/Card';
 import CardXp from '../components/CardXp';
-import LeftSidebar from '../components/LeftSidebar';
 import RightSidebar from '../components/RightSidebar';
 import Hero from '../components/Hero';
 import PROJECTS from '../data/projectsData';
-import imgHomeSmall from '../assets/img/imgHomeSmall.png';
 import PAGES from '../data/pagesData';
 import MainContent from '../components/MainContent';
-import Experience from '../components/CardXp';
 import { Link } from 'react-router-dom';
 
 const homePage = PAGES.home;
 
 const projectHero = PROJECTS.filter((project) => project.isFeatured);
-  // console.log(projectHero);
-  // console.log(PROJECTS);
 
 const contactPreview = homePage.ctaTo.find(
   (item) => item.slug === "contact"

@@ -1,7 +1,6 @@
 import '../styles/Card.css';
 import { Link } from 'react-router-dom';
 
-// Arborescence du retour : img, title, shortStack, shortDescription
 export default function Card({ projects }){
     return (
     <section className='cards-container'>

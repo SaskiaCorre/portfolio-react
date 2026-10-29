@@ -1,5 +1,3 @@
-import PAGES from "../data/pagesData";
-
 export default function Experience({pagesData}){
     return (<>
     <div className="xp-container">

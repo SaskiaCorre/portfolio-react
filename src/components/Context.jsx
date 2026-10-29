@@ -1,5 +1,3 @@
-import PROJECTS from "../data/projectsData";
-
 export default function Context({context, contextCards}){
     return (<>
     <div className="context">

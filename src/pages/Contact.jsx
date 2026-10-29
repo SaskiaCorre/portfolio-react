@@ -31,7 +31,7 @@ export default function Contact() {
     const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Les clés de cet objet doivent correspondre aux variables {{variable}} de ton Template EmailJS
+    // Les clés de cet objet = {{variable}} de mon Template EmailJS
     const templateParams = {
       from_name: values.name,
       from_email: values.email,

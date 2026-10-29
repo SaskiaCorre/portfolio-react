@@ -1,5 +1,3 @@
-import PROJECTS from "../data/projectsData";
-
 export default function Approach({approach, approachCards}){
     return (
     <>

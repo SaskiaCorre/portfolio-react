@@ -1,5 +1,3 @@
-import PAGES from "../data/projectsData";
-
 export default function Objective({objective, objectiveCards}){
     return (
     <>

@@ -3,7 +3,6 @@
 }
 
 /* HERO */
-/* LAYOUT TAILLE IDEALE : */
 .details-page .hero-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,7 +19,6 @@
 
 .details-page .hero-content {
   justify-items: center;
-  text-align: center;
 }
 
 .details-page .hero-title {
@@ -95,10 +93,9 @@
 }
 
 .section-type {
-  border: solid 2px var(--bg-dark);
-  border-radius: 10px;
+  color: var(--bg-dark);
   padding: 0.4rem 1rem;
-  justify-self: left;
+  width: fit-content;
 }
 
 .section-description {
@@ -114,10 +111,21 @@
 .approach,
 .feature,
 .datamodel,
-/* .diagram, */
 .model, 
 .gallery {
   padding: 5rem 0;
+}
+
+.context-card,
+.objective-card,
+.feature-card,
+.datamodel-card,
+.model-card,
+.skills,
+.challenges {
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
 }
 
 /* CONTEXT */
@@ -146,10 +154,7 @@
 
 .context-card {
   padding: 1.5rem;
-  border: 1px solid #dce8dc;
-  border-radius: 10px;
   text-align: center;
-  background: #fff;
 }
 
 /* OBJECTIVES */
@@ -171,11 +176,8 @@
 
 .objective-card {
   padding: 2rem;
-  border: 1px solid #dce8dc;
-  border-radius: 12px;
-  background: #fff;
+
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
 }
 
 /* APPROACH */
@@ -183,17 +185,12 @@
   text-align: center;
 }
 
-/* .approach-grid {
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:2rem;
-} */
-
 .approach-card {
   margin: 0;
   padding: 2rem;
   border-left: 4px solid var(--bg-dark);
-  background: #f8fbf8;
+  background-color: var(--surface-alt);
+
   text-align: left;
 }
 
@@ -202,19 +199,9 @@
   text-align: center;
 }
 
-/* .features-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  padding: 0;
-} */
-
 .feature-card{
   min-height: 130px;
   padding: 1.5rem;
-  border: 1px solid #dce8dc;
-  border-radius: 12px;
-  background: #fff;
 
   display: flex;
   flex-direction: column;
@@ -229,7 +216,7 @@
 
 .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-color);
 }
 
 .feature-icon,
@@ -276,10 +263,7 @@
 
 .datamodel-card {
   padding: 2rem;
-  border: 1px solid #dce8dc;
-  border-radius: 14px;
-  background-color: #f9f9f9;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.06);
 }
 
 .datamodel-card h3 {
@@ -311,7 +295,6 @@
   display:grid;  
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
-  /* padding: 0; */
 }
 
 .data-choices .datamodel-card { 
@@ -324,16 +307,16 @@
   justify-content: center;
 
   text-align: center;
+
+  background-color: var(--surface-bg);
+  color: var(--text-main);
+  border-color: var(--border-color);
 }
 
 .data-choices .datamodel-card .datamodel-subtitle {
   margin: 0.75rem 0;
   font-size:1.2rem;
   font-weight:700;
-}
-
-.data-choices .datamodel-card .datamodel-title {
-  color: black;
 }
 
 .data-choices .section-description {
@@ -343,12 +326,10 @@
   line-height: 1.7;
 }
 
-/* Diagram */
+/* DIAGRAM */
 .diagram {
-  /* text-align: center; */
   padding: 2rem;
-
-  background: #fafafa;
+  
   border: 1px solid #e5e5e5;
   border-radius: 14px;
 }
@@ -362,9 +343,8 @@
 .diagram-card {
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+  box-shadow: var(--shadow-color);
   text-align: center;
-  background-color: #f9f9f9;
 } 
 
 .diagram-img {
@@ -375,7 +355,7 @@
   border-radius: 8px;
 }
 
-/* Model */
+/* MODEL */
 .model {
   text-align: center;
 }
@@ -388,8 +368,7 @@
 
 .model-card {
   padding: 2rem;
-  text-align: center;
-  background-color: #f9f9f9;
+  text-align: center; 
 }
 
 .model-card .card-img {
@@ -413,18 +392,16 @@
   font-size: 1rem;
 }
 
-/* Gallery */
+/* GALLERY */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid; 
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
   gap: 2rem;
 }
 
 .gallery-card {
-  /* margin: 0; */
   padding: 1rem;
 
-  background: white;
   border: 1px solid #dce8dc;
   border-radius: 14px;
   text-align: center;
@@ -444,10 +421,10 @@
 .details-img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 450px;
+  object-fit: contain; 
   border-radius: 8px;
 
-  cursor: pointer;
   transition: transform 0.2s ease;
 }
 
@@ -458,16 +435,31 @@
   transition: transform 0.2s ease;
 }
 
-.details-img:hover,
 .card-img:hover,
 .grid-img:hover {
   transform: scale(1.03);
 }
 
-/* =========================
-   APPRENTISSAGE / BILAN
-========================= */
+.details-img:hover {
+  transform: scale(1.015);
+}
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--swiper-pagination-bullet-inactive-color);
+}
+
+.gallery .swiper-pagination-bullet {
+  background-color: var(--swiper-pagination-bullet-inactive-color);
+  opacity: 0.4;
+}
+
+.gallery .swiper-pagination-bullet-active {
+  background-color: var(--swiper-pagination-color);
+  opacity: 1;
+}
+
+/* APPRENTISSAGE / BILAN */
 .project-learning {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -480,10 +472,6 @@
 .project-learning .skills,
 .project-learning .challenges {
   padding: 2rem;
-  background-color: #f9f9f9;
-  border: 1px solid #dce8dc;
-  border-radius: 14px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
 .project-learning .section-title {
@@ -498,7 +486,6 @@
 }
 
 /* LISTE */
-
 .project-learning .list {
   display: flex;
   flex-direction: column;
@@ -524,7 +511,6 @@
 }
 
 /* CONCLUSION */
-
 .conclusion {
   width: min(900px, 92%);
   margin: 0 auto;
@@ -541,7 +527,6 @@
 
 
 /* LIGHTBOX */
-
 .lightbox {
   position: fixed;
   inset: 0;
@@ -631,12 +616,9 @@
 
 /* RESPONSIVE TABLETTE */
 @media (max-width: 992px) {
-  /* HERO */
-
+  /* Hero */
   .details-page .hero-layout {
     grid-template-columns: 1fr;
-    /* gap: 2rem;
-    min-height: auto; */
     padding: 4rem 6%;
   }
 
@@ -644,8 +626,7 @@
     display: none;
   }
 
-  /* GRILLES */
-
+  /* Grilles */
   .context-grid,
   .objectives-grid,
   .approach-grid,
@@ -664,7 +645,7 @@
 
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
-  /* HERO */
+  /* Hero */
   .details-page .hero-layout {
     padding: 3rem 1.25rem;
   }
@@ -687,7 +668,11 @@
     padding: 1rem;
   }
 
-  /* SECTIONS */
+  .detail-image {
+    height: 200px;
+  }
+
+  /* Sections */
   .context,
   .objective,
   .approach,
@@ -704,7 +689,7 @@
     font-size: 1rem;
   }
 
-  /* GRILLES */
+  /* Grilles */
   .context-grid,
   .objectives-grid,
   .approach-grid,
@@ -714,12 +699,10 @@
   .diagram-grid
   .data-choices{ 
     grid-template-columns: 1fr;
-    /* gap: 1.5rem; */
   }
 
 
-  /* CARTES */
-
+  /* Cartes */
   .context-card,
   .objective-card,
   .approach-card,
@@ -755,8 +738,8 @@
   .conclusion .section-description {
     font-size: 1rem;
   }
-  /* GITHUB */
 
+  /* GitHub */
   .git-btn {
     width: min(15rem, 80%);
   }

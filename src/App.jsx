@@ -1,7 +1,6 @@
 import './App.css';
 import './index.css';
 
-import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './pages/About';
@@ -11,6 +10,9 @@ import Projects from './pages/Projects';
 import ProjectDetails from './pages/ProjectDetails';
 import Contact from './pages/Contact';
 
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { useEffect, useState}  from 'react';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -18,39 +20,51 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [ 
       {
-      path: '/',
-      element: <Home />
+        path: '/',
+        element: <Home />
       },
       {
-      path: '/a-propos',
-      element: <About />
+        path: '/a-propos',
+        element: <About />
       },
       {
-      path: '/projets',
-      element: <Projects />
+        path: '/projets',
+        element: <Projects />
       },
       {
-      path: '/projects/:slug',
-      element: <ProjectDetails />
+        path: '/projects/:slug',
+        element: <ProjectDetails />
       },
       {
-      path: '/contact',
-      element: <Contact />
+        path: '/contact',
+        element: <Contact />
       },
     ],
   },
 ]);
 
 function Root() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('portfolio-theme') === 'dark' ? 'dark' : 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) => 
+      currentTheme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
-    <>
-  
-    <Header />
-    <main>
-      <Outlet />
-    </main>
-    <Footer />
-      
+    <>  
+    <Header theme={theme} onToggleTheme={toggleTheme} />
+      <main>
+        <Outlet />
+      </main>
+    <Footer />      
     </>
   )
 }

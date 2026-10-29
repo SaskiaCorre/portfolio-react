@@ -12,13 +12,6 @@
 
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-<!-- ![Accueil](./src/assets/screenshots/archiPortfolio.png)
-![Accueil](./src/assets/screenshots/accueilPortfolio.png)
-![Accueil](./src/assets/screenshots/detailsPortfolio.png)
-![Accueil](./src/assets/screenshots/responsivePortfolio.png) -->
-
-![Uploading](./src/assets/gif/accueilPortfolio.gif)
-
 <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
   <h1 align="center">
     <span>&#128188;</span> Portfolio React <br />
@@ -76,31 +69,39 @@
     │ <br />
     ├── assets/ <br />
     ├── components/ <br />
-    │   ├── Hero <br />
-    │   ├── Header <br />
-    │   ├── Footer <br />
-    │   ├── MainContent <br />
-    │   ├── ProjectPreview <br />
-    │   ├── Context <br />
-    │   ├── Objectives <br />
     │   ├── Approach <br />
-    │   ├── Feature <br />
-    │   ├── McdMld <br />
+    │   ├── Card <br />
+    │   ├── CardXP <br />
+    │   ├── Challenges <br />
+    │   ├── Context <br />
     │   ├── Diagram <br />
+    │   ├── Feature <br />
+    │   ├── Footer <br />
+    │   ├── Gallery <br />
+    │   ├── GridProject <br />
+    │   ├── Header <br />
+    │   ├── Hero <br />
+    │   ├── LeftSidebar <br />
+    │   ├── List <br />
+    │   ├── MainContent <br />
+    │   ├── McdMld <br />
     │   ├── Model <br />
-    │   └── Gallery <br />
+    │   ├── Objectives <br />
+    │   ├── ProjectPreview <br />
+    │   ├── RightSidebar <br />
+    │   └── Skills <br />
     │ <br />
     ├── data/ <br />
     │   ├── pagesData.js <br />
     │   └── projectsData.js <br />
     │ <br />
     ├── pages/ <br />
-    │   ├── HomePage <br />
-    │   ├── ProjectsPage <br />
-    │   ├── ProjectDetailsPage <br />
-    │   ├── AboutPage <br />
-    │   ├── ContactPage <br />
-    │   └── ErrorPage <br />
+    │   ├── About <br />
+    │   ├── Contact <br />
+    │   ├── ErrorPage <br />
+    │   ├── Home <br />
+    │   ├── ProjectDetails <br />
+    │   └── Projects <br />
     │ <br />
     └── App.jsx <br />
 
@@ -152,6 +153,8 @@
   <h2><span>&#128248;</span>Apperçu</h2>
   <p>Page d'accueil</p>
     <img src="./src/assets/gif/accueilPortfolio.gif" width="900">
+  <p>Détails du projet E-commerce Symfony</p>
+    <img src="./src/assets/gif/detailsProjet.gif" width="900">
 
   <h2><span>&#128260;</span>Perspectives d'évolution</h2>
     <p>Plusieurs améliorations sont prévues :</p>
@@ -176,7 +179,7 @@
       </ul>
 
   <h2><span>&#128231;</span>Contact</h2>
-    <p>N'hésitez pas à me contacter via le formulaire du portfolio ou sur LinkedIn.</p>
+    <p>N'hésitez pas à me contacter via LinkedIn.</p>
     <p>Merci pour votre visite !</p>
 
 </body>

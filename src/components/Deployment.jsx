@@ -1,5 +1,3 @@
-import PROJECTS from "../data/projectsData";
-
 export default function Deployment({title, description, steps}){
     return (
     <div className="deployment">
