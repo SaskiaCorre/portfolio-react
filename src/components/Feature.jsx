@@ -18,8 +18,8 @@ export default function Feature({feature, featureCards}){
 
             return (
                 <div
-                key={featureCards.title}
-                className="feature-card"
+                    key={featureCards.title}
+                    className="feature-card"
                 >
                     <Icon className="feature-icon" />
                     {featureCards.title && (

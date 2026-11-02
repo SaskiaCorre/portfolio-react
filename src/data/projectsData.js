@@ -2,7 +2,7 @@ import graphPlotlySmall from '../assets/screenshots/graphPlotlySmall.png';
 import eShopHomeSmall from '../assets/screenshots/eShopHomeSmall.png';
 import network from '../assets/screenshots/network.png';
 
-// import cvEnLigne from '../assets/screenshots/cvEnLigne.png';
+import cvEnLigne from '../assets/screenshots/cvEnLigne.png';
 
 import averageCustomerSatisfaction from '../assets/images/galleries/graphsPython/averageCustomerSatisfaction.png';
 import averageDeliveryTime from '../assets/images/galleries/graphsPython/averageDeliveryTime.png';
@@ -36,7 +36,7 @@ import dossiersUtilisateurs from '../assets/images/galleries/confReseau/dossiers
 import pingConnexion from '../assets/images/galleries/confReseau/pingConnexion.png';
 import sansDroits from '../assets/images/galleries/confReseau/sansDroits.png';
 import ticketEnCours from '../assets/images/galleries/confReseau/ticketEnCours.png';
-// import ticketUtilisateur from '../assets/images/galleries/confReseau/ticketUtilisateur.png';
+import ticketUtilisateur from '../assets/images/galleries/confReseau/ticketUtilisateur.png';
 import topoDhcp from '../assets/images/galleries/confReseau/topoDhcp.png';
 import topoLan from '../assets/images/galleries/confReseau/topoLan.png';
 
@@ -57,8 +57,6 @@ import router from '../assets/images/galleries/portfolioReact/router.png';
 import routerSmall from '../assets/images/galleries/portfolioReact/routerSmall.png'; 
 import routerHero from '../assets/images/galleries/portfolioReact/routerHero.png';
 
-// import receiptPythonPoo from '../assets/screenshots/receiptPythonPoo.png';
-
 import disquesEtVol from '../assets/images/galleries/dualBoot/disquesEtVol.png';
 import infosSystemes from '../assets/images/galleries/dualBoot/infosSystemes.png';
 import partitionNvme from '../assets/images/galleries/dualBoot/partitionNvme.png';
@@ -73,8 +71,10 @@ import workspace from '../assets/images/galleries/dualBoot/workspace.png';
 import topo from '../assets/images/galleries/dualBoot/topo.png';
 import posteUbuntu from '../assets/images/galleries/dualBoot/posteUbuntu.png';
 
-import { ImConnection, ImDatabase } from "react-icons/im";
-import { BsCartCheck } from "react-icons/bs";
+import detailsEshop from '../assets/images/galleries/cvInteractif/detailsEshop.png';
+import listeDeroulante from '../assets/images/galleries/cvInteractif/listeDeroulante.png';
+import lienCliquable from '../assets/images/galleries/cvInteractif/lienCliquable.png';
+
 import { 
   FaStripe, 
   FaUserShield, 
@@ -87,16 +87,35 @@ import {
   FaDesktop,
   FaLinux,
   FaUsb,
+  FaGithub, 
+  FaUserLock,
+  FaBars,
+  FaIcons,
+  FaGit,
+  FaEye,
+  FaServer,
+  FaGlobe, 
 } from "react-icons/fa6";
+import { 
+  FaUsersCog,
+  FaMobileAlt, 
+  FaHistory,
+  FaUsers,
+  FaTh, 
+} from "react-icons/fa";
+import { ImConnection, ImDatabase } from "react-icons/im";
+import { BsCartCheck } from "react-icons/bs";
 import { MdOutlineDashboardCustomize, MdTerminal, MdOutlineSecurity } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
-import { FaUsersCog, FaGithub, FaMobileAlt, FaHistory, FaUserLock } from "react-icons/fa";
 import { FiBarChart2, FiPieChart, FiTrendingUp } from "react-icons/fi";
 import { RiLuggageCartLine } from "react-icons/ri";
 import { GiReceiveMoney } from "react-icons/gi";
 import { GrCatalog } from "react-icons/gr";
 import { CiStar } from "react-icons/ci";
 import { SlArrowDown } from "react-icons/sl";
+import { IoMdGitNetwork } from "react-icons/io";
+import { AiOutlineDeploymentUnit } from "react-icons/ai";
+import { SiEsbuild } from "react-icons/si"; 
 
 const PROJECTS = [
 // #############################
@@ -700,7 +719,7 @@ const PROJECTS = [
 
     shortStack: "React / Vite",
 
-    shortDescription: "Composants réutilisables, données centralisées, modes clair / sombre",
+    shortDescription: "Composants réutilisables, données centralisées, mode clair / sombre",
 
     fullDescription: "Une application évolutive, responsive et facile à maintenir",
 
@@ -716,7 +735,7 @@ const PROJECTS = [
     contextCards: [
       {
         title: "Durée",
-        content: "3 mois",
+        content: "4 mois",
       },
       {
         title: "Technology",
@@ -800,28 +819,33 @@ const PROJECTS = [
       },
     ],
 
-    // deployment: {
-    //   title: "Déploiement",
-    //   description: "Première mise en production de l'application, de la génération du build jusqu'à son accessibilité sur Internet.",
-    //   steps: [
-    //     {
-    //       title: "Build de production",
-    //       content: "Génération du dossier dist avec Vite grâce à npm run build.",
-    //     },
-    //     {
-    //       title: "Prévisualisation",
-    //       content: "Vérification du comportement du build en local avec npm run preview.",
-    //     },
-    //     {
-    //       title: "Hébergement",
-    //       content:  "Mise en ligne des fichiers générés sur la plateforme d'hébergement choisie.",
-    //     },
-    //     {
-    //       title: "Domaine et accès",
-    //       content: "Configuration du nom de domaine, du DNS, du HTTPS et des routes de l'application.",
-    //     },
-    //   ],
-    // },
+    deployment: {
+      title: "Déploiement",
+      description: "Première mise en production de l'application, de la génération du build jusqu'à son accessibilité sur Internet.",
+    },
+    
+    deploymentCards: [
+        {
+          title: "Build de production",
+          description: "Génération du dossier dist avec Vite grâce à npm run build.",
+          icon: SiEsbuild,  
+      },
+        {
+          title: "Prévisualisation",
+          description: "Vérification du comportement du build en local avec npm run preview.",
+          icon: FaEye,
+        },
+        {
+          title: "Hébergement",
+         description:  "Mise en ligne des fichiers générés sur la plateforme d'hébergement choisie.",
+          icon: FaServer,
+        },
+        {
+          title: "Domaine et accès",
+          description: "Configuration du nom de domaine, du DNS, du HTTPS et des routes de l'application.",
+          icon: FaGlobe,
+        },
+      ],
 
     dataModel: null,
 
@@ -947,6 +971,230 @@ const PROJECTS = [
 
     isFeatured: true,
   },
+
+
+
+// #############################
+// CV en ligne
+// #############################
+  {
+    slug: "cv-html-css",
+      
+    gridTitle: "Hébergement Git | Projet léger en HTML - CSS purs",
+
+    gridDescription: "Mon premier CV en ligne déployé sous l'extension .git.io",
+
+    title: "CV Interactif",
+
+    image: cvEnLigne,
+
+    hero: {
+      title: "Mon CV en ligne",
+      subtitle: "Concevoir un projet léger, sémantique et hébergé avec Git.",
+      badges: ["HTML5", "CSS3", "GitHub Pages"],
+      content: "Créer un espace professionnel visible par les recruteurs et interconnecté avec mes réalisations techniques.",
+      image: cvEnLigne,
+    },
+
+    shortStack: "HTML / CSS",
+
+    shortDescription: "CV interactif multipages avec navigation par projets techniques",
+
+    fullDescription: "Un CV web éco-responsable et responsive, structuré en HTML5 sémantique et mis en forme via CSS Grid/Flexbox, permettant aux recruteurs de naviguer fluidement entre le profil et les fiches de réalisations techniques.",
+
+    category: "Web",
+
+      context: {
+        title: "Contexte",
+        type: "Projet personnel",
+        content: "Disposer d'une vitrine en ligne professionnelle pour valoriser ma reconversion en conception et développement web.",
+        secondContent: null,   
+      },
+
+    contextCards: [
+      {
+        title: "Durée",
+        content: "10 jours",
+      },
+      {
+        title: "Technology",
+        content: "HTML5 / CSS3",
+      },
+      {
+        title: "Niveau",
+        content: "Intermédiaire",
+      },
+      {
+        title: "Objectif",
+        content: "Rendre mon profil visible et interactif en ligne",
+        }
+    ],
+
+    objective: {
+        title: "Objectifs",
+        content: "Répondre aux attentes des recruteurs IT en proposant une navigation intuitive et des preuves concrètes de mes compétences.",
+      },
+
+    objectiveCards: [
+      {
+        title: "Sémantique & Structure",
+        content: "Utiliser des balises HTML5 adaptées (<header>, <aside>, <main>, <section>) pour un code propre et accessible.",
+      },
+      {
+        title: "Design Responsive",
+        content: "Assurer une lecture fluide et adaptée sur tous les supports (desktop et mobile).",
+      },
+      {
+        title: "Interactivité",
+        content: "Relier le CV à des pages de projets détaillées.",
+      }
+    ],
+    
+    approach: {
+        title: "Ma démarche",
+        content: "Une conception pensée par étapes, de la maquette papier initiale jusqu'au déploiement en production.",
+      },
+
+    approachCards: [  
+      {
+        title: "Analyse et Maquettage",
+        content: "Reprise de la structure d'un CV papier traditionnel (sidebar de compétences et corps principal) pour l'adapter au web.",
+      },
+      {
+        title: "Structuration HTML",
+        content: "Intégration des contenus textuels, création de liens hypertextes de navigation et structuration des grilles de projets.",
+      },
+      {
+        title: "Stylisation CSS",
+        content: "Application d'une charte graphique professionnelle (tons verts axés infrastructure), utilisation de CSS Grid et polices Google Fonts.",
+      }
+    ],
+      
+    feature: {
+        title: "Fonctionnalités clés",
+        content: "Les éléments marquants de l'interface",
+      },
+
+    featureCards: [  
+      {
+        title: "Layout en Grid & Flexbox",
+        content: "Organisation symétrique des boutons de projets sous forme de grille moderne (2 lignes x 3 colonnes).",
+        icon: FaTh,
+      },
+      {
+        title: "Menu de navigation contextuel",
+        content: "Barre de navigation sticky permettant de basculer instantanément entre le CV et les fiches techniques.",
+        icon: FaBars,
+      },
+      {
+        title: "Intégration FontAwesome",
+        content: "Utilisation d'icônes vectorielles légères pour dynamiser l'interface et illustrer les compétences techniques.",
+        icon: FaIcons,
+      }
+    ],
+
+    deployment: {
+        title: "Mise en ligne",
+        description: "Hébergement du projet sur GitHub Pages (.github.io)",
+    },
+
+    deploymentCards: [
+      {
+        title: "Versionnement Git",
+        description: "Suivi des modifications et gestion des branches du projet en local.",
+        icon: FaGit,
+      },
+      {
+        title: "Publication GitHub",
+        description: "Déploiement de la branche principale sur l'environnement d'hébergement statique de GitHub.",
+        icon: AiOutlineDeploymentUnit,
+      },
+      {
+        title: "Validation en production",
+        description: "Vérification des liens absolus/relatifs et de l'accessibilité publique de l'URL du portfolio.",
+        icon: IoMdGitNetwork,
+      }
+    ],     
+
+    dataModel: null,
+
+    dataModelSubtitle: null,
+
+    dataModelCards: null,
+
+    dataModelChoices: null,
+
+    diagram: null,
+
+    diagramCards: null,
+
+    model: null,
+
+    modelCards: null,
+
+    gallerySection: {
+      title: "Galerie",
+      content: "Aperçu visuel de l'interface du CV et des pages associées",
+    }, 
+
+    gallery: [
+      {
+        title: "Page d'accueil du CV",
+        content: "Vue globale de la page principale hébergée sur .github.io",
+        image: cvEnLigne,
+        isInGrid: true,
+      },
+      {
+        title: "Liens interactifs vers les projets techniques",
+        content: "Les boutons de la grille permettent d'accéder aux fiches détaillées des projets techniques.",
+        image: lienCliquable,
+        isInGrid: false,
+      },
+      {
+        title: "Fiche de réalisation technique",
+        content: "Exemple de page détaillée présentant un projet e-commerce Symfony.",
+        image: detailsEshop,
+        isInGrid: true,
+      },
+      {
+        title: "Accessibilité des projets techniques",
+        content: "Le visiteur peut sélectionner un projet technique dans la liste déroulante pour accéder à sa fiche détaillée, ou retourner sur la page d'accueil.",
+        image: listeDeroulante,
+        isInGrid: true,
+      },
+    ],
+          
+    skills: {
+      title: "Compétences acquises",
+      description: "Ce projet m'a permis deconsolider :", 
+        listItems: [
+          "Réaliser un projet web modulaire en HTML5 - CSS3 purs",
+          "Maîtriser le positionnement avancé avec CSS Grid et Flexbox",
+          "Mettre en place un workflow de déploiement simple via Git et GitHub Pages",
+          "Structurer des pages web orientées portfolio technique"
+      ],
+      icon: SlArrowDown,
+    },
+
+    challenges: {
+      title: "Challenges",
+      description: "Les principaux défis rencontrés :", 
+      listItems: [
+        "Traduire fidèlement la mise en page d'un CV papier en un design web responsive et moderne",
+        "Gérer proprement les chemins de liens relatifs entre le dossier principal et les sous-dossiers de réalisations"
+      ],
+      icon: SlArrowDown,
+    },
+
+    conclusion: "Ce projet m'a permis de rendre mon parcours visible en ligne, constituant la première pierre de mon portfolio de technicienne informatique. Il m'a appris à structurer un projet web léger, à utiliser les balises sémantiques HTML5, à styliser avec CSS Grid et Flexbox, et à déployer efficacement sur GitHub Pages.",
+
+
+    github: "https://github.com/SaskiaCorre/mon.cv.interactif",
+
+    gitIcon: FaGithub,
+
+    isFeatured: false,
+  }, 
 
 // #############################
 // CONFIG DUAL-BOOT
@@ -1433,7 +1681,7 @@ const PROJECTS = [
   {
     title: "Ticket utilisateur",
     content: "Illustration du parcours de déclaration d'un incident par un utilisateur et des informations transmises au support.",
-    image: sansDroits,
+    image: ticketUtilisateur,
     isInGrid: false,
   },
   {
@@ -1484,265 +1732,6 @@ const PROJECTS = [
 
     isFeatured: false,
   },
-
-
-// #############################
-// TICKET DE CAISSE PYTHON
-// #############################
-  /*{
-    slug: "receipt-python-poo",
-      
-    gridTitle: "Data Management",
-
-    gridDescription: "Ticket de caisse avec gestion des vendeurs et des ventes, développé en Python orienté objet. L'application permet de gérer les transactions, d'afficher les tickets et de suivre les performances des vendeurs.",
-
-    title: "Gestion de caisse",
-
-    image: receiptPythonPooSmall,
-
-    hero: {
-      title: "Ticket de caisse avec gestion des vendeurs",
-      subtitle: "Concevoir une application de gestion de ticket de vente",
-      badges: ["Python", "Programmation Orientée Objet"],
-      content: "Gérer les tickets en temps réel",
-      image: receiptPythonPoo,
-    },
-
-    shortStack: "Python POO",
-
-    shortDescription: "Ticket de caisse",
-
-    fullDescription: "Les tickets calculent les sous-totaux en fonction des quatités de chaque produit et portent le nom du vendeur qui a réalisé l'encaissement.",
-
-
-    category: "Programmation Orientée Objet",
-
-      context: {
-        title: "Le Contexte",
-        type: "Projet personnel",
-        content: "Créer une mini application de calcul et de gestion des utilisateurs.",
-        secondContent: null,   
-      },
-
-    contextItems: [
-      {
-        title: "Durée",
-        content: "2 jours",
-      },
-      {
-        title: "Technology",
-        content: "Python POO",
-      },
-      {
-        title: "Niveau",
-        content: "Intermédiaire",
-      },
-      {
-        title: "Objectif",
-        content: "Gestion des utilisateurs",
-        }
-    ],
-
-    objective: null,
-
-    objectiveCards: null,
-    
-    approach: null,
-
-    approachCards: null,
-      
-    feature: null,
-
-    featureCards: null,
-
-    // deployment: null,
-
-    dataModel: null,
-
-    dataModelSubtitle: null,
-
-    dataModelCards: null,
-
-    dataModelChoices: null,
-
-    diagram: null,
-
-    diagramCards: null,
-
-    model: null,
-
-    modelCards: null,
-
-    gallerySection: {
-      title: "Visualisations des données",
-      content: "Les graphiques permettent d'explorer différents indicateurs commerciaux, de comparer les résultats et d'observer leur répartition selon plusieurs critères.",
-    }, 
-
-    gallery: [
-      {
-        title: "Ticket de caisse",
-        content: "",
-        image: receiptPythonPoo,
-        isInGrid: true,
-      },
-    ],
-          
-    skills: {
-      title: "Compétences acquises",
-      description: "Ce projet m'a permis de :",
-      listItems: [
-        "manipuler les objets Python",
-      ],
-      icon: SlArrowDown,
-    },
-
-    challenges: {
-      title: "Challenges",
-      description: "Les principaux défis rencontrés :", 
-      listItems: [
-        "obtenir les bons résultats dde calcul",
-        "gérer les utilisateurs",
-      ],
-      icon: SlArrowDown,
-    },
-
-    conclusion: "Une application légère et facile à mettre en place pour un outils du quotidien de beaucoup d'entreprises.",
-
-
-    github: "https://github.com/SaskiaCorre/ticket.caisse.python",
-
-    gitIcon: FaGithub,
-
-    isFeatured: true,
-  }, */
-
-
-// #############################
-// CV en ligne
-// #############################
-  /*{
-    slug: "web-cv",
-      
-    gridTitle: "HTML / CSS purs | Hébergement Git",
-
-    gridDescription: "Mon premier CV en ligne déployé sous l'extension .git.io",
-
-    title: "CV en ligne",
-
-    image: cvEnLigne,
-
-    hero: {
-      title: "Mon CV en ligne",
-      subtitle: "Concevoir un projet léger à mettre en ligne avec Git.",
-      badges: ["HTML", "CSS"],
-      content: "Créer un CV visble par les recruteurs",
-      image: cvEnLigne,
-    },
-
-    shortStack: "HTML / CSS",
-
-    shortDescription: "CV en ligne",
-
-    fullDescription: "Un CV intéractif avec plusieurs pages et un menu déroulant",
-
-    category: "Web",
-
-      context: {
-        title: "Le Contexte",
-        type: "Projet personnel",
-        content: "Créer un profil accessible en ligne.",
-        secondContent: null,   
-      },
-
-    contextItems: [
-      {
-        title: "Durée",
-        content: "",
-      },
-      {
-        title: "Technology",
-        content: "HTML / CSS",
-      },
-      {
-        title: "Niveau",
-        content: "Intermédiaire",
-      },
-      {
-        title: "Objectif",
-        content: "",
-        }
-    ],
-
-    objective: null,
-
-    objectiveCards: null,
-    
-    approach: null,
-
-    approachCards: null,
-      
-    feature: null,
-
-    featureCards: null,
-
-    // deployment: null,
-
-    dataModel: null,
-
-    dataModelSubtitle: null,
-
-    dataModelCards: null,
-
-    dataModelChoices: null,
-
-    diagram: null,
-
-    diagramCards: null,
-
-    model: null,
-
-    modelCards: null,
-
-    gallerySection: {
-      title: "Visualisations des données",
-      content: "Lrer les résultats et d'observer leur répartition selon plusieurs critères.",
-    }, 
-
-    gallery: [
-      {
-        title: "Ticket de caisse",
-        content: "",
-        image: receiptPythonPoo,
-        isInGrid: true,
-      },
-    ],
-          
-    skills: {
-      title: "Compétences acquises",
-      description: "Ce projet m'a permis de :",
-      listItems: [
-        "",
-      ],
-      icon: SlArrowDown,
-    },
-
-    challenges: {
-      title: "Challenges",
-      description: "Les principaux défis rencontrés :", 
-      listItems: [
-        "",
-      icon: SlArrowDown,
-    },
-
-    conclusion: "",
-
-
-    github: "https://github.com/SaskiaCorre/ticket.caisse.python",
-
-    gitIcon: FaGithub,
-
-    isFeatured: true,
-  }, */
 ]
 
 export default PROJECTS;

@@ -11,13 +11,13 @@ import Skills from '../components/Skills';
 import Challenges from '../components/Challenges';
 import Gallery from '../components/Gallery';
 import McdMld from '../components/McdMld';
-// import Deployment from '../components/Deployment';
+import Deployment from '../components/Deployment';
 
 import '../App.css';
 import '../styles/Details.css';
 import '../styles/Grid.css';
 
-export default function ProjectDetails({project}){
+export default function ProjectDetails(){
   const { slug } = useParams();
 
   const projectDetails = PROJECTS.find(
@@ -31,7 +31,6 @@ export default function ProjectDetails({project}){
     <article className='details-page'> 
     <h2 className='hero-subtitle'>{projectDetails.hero.subtitle}</h2>
       <Hero
-        // subtitle={projectDetails.hero.subtitle} 
         title={projectDetails.hero.title}
         badges={projectDetails.hero.badges}
         content={projectDetails.hero.content}
@@ -44,21 +43,29 @@ export default function ProjectDetails({project}){
           context={projectDetails.context}
           contextCards={projectDetails.contextCards}
         />
+      
+        {projectDetails.objective && (
+          <Objective 
+            objective={projectDetails.objective} 
+            objectiveCards={projectDetails.objectiveCards}
+          />
+        )}
 
-        <Objective 
-          objective={projectDetails.objective} 
-          objectiveCards={projectDetails.objectiveCards}
-        />
-        
-        <Approach 
-          approach={projectDetails.approach} 
-          approachCards={projectDetails.approachCards}
-        />
-        
-        <Feature 
-          feature={projectDetails.feature} 
-          featureCards={projectDetails.featureCards}
-        />
+      
+        {projectDetails.approach && (
+          <Approach 
+            approach={projectDetails.approach} 
+            approachCards={projectDetails.approachCards}
+          />
+        )}
+
+      
+        {projectDetails.feature && (
+          <Feature 
+            feature={projectDetails.feature} 
+            featureCards={projectDetails.featureCards}
+          />
+        )}
 
         {projectDetails.dataModel && (
           <McdMld 
@@ -76,10 +83,12 @@ export default function ProjectDetails({project}){
           />
         )}
       
-        {/* {projectDetails.deployment && (
+        {projectDetails.deployment && (
           <Deployment 
-            deployment={projectDetails.deployment}/>
-        )} */}
+            deployment={projectDetails.deployment}
+            deploymentCards={projectDetails.deploymentCards}
+          />
+        )}
 
         {projectDetails.model && (
           <Model 

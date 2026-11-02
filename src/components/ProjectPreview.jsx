@@ -1,23 +1,46 @@
 import '../styles/Grid.css';
 import '../styles/Card.css';
-import GridProject from './GridProject';
+import { Link } from "react-router-dom";
 
 export default function ProjectPreview({ project }) {
-  
+
   const previewImages = project.gallery.filter(
     (image) => image.isInGrid
   );
 
   return (
-    <section className="one-project">
-      <h2 className='one-project-title'>{project.gridTitle}</h2>
-      <p className='one-project-cta'>{project.gridDescription}</p>
+    <Link
+      className="project-link"
+      to={`/projects/${project.slug}`}
+    >
+      <section className="one-project">
 
-      <GridProject
-        images={previewImages}
-        slug={project.slug}
-      />
-    </section>
+        {project.gridTitle && (
+          <h2 className='one-project-title'>
+            {project.gridTitle}
+          </h2>
+        )}
+        
+        {project.gridDescription && (
+          <p className='one-project-cta'>
+            {project.gridDescription}
+          </p>
+        )}
+        
+        <div className="project-preview">
+          {previewImages.map((image) => (
+              <img
+                key={image.title}
+                className='grid-card'
+                src={image.image}
+                alt={image.title}
+              />
+              
+          ))}
+        </div>
+        
+      </section>
+    </Link>
   );
 }     
         

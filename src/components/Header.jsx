@@ -21,7 +21,7 @@ export default function Header({ theme, onToggleTheme }) {
           aria-label={isDarkTheme ? 'Activer le thème clair' : 'Activer le thème sombre'}
         >
           {isDarkTheme ? <FiSun aria-hidden="true"/> : <FiMoon aria-hidden="true"/>}
-          <span>{isDarkTheme ? 'Thème clair' : 'Thème sombre'}</span>
+          <span>{isDarkTheme ? 'Mode clair' : 'Mode sombre'}</span>
         </button>
       </nav>      
     </header>

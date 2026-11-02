@@ -10,7 +10,7 @@ import Projects from './pages/Projects';
 import ProjectDetails from './pages/ProjectDetails';
 import Contact from './pages/Contact';
 
-import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Outlet, RouterProvider, createBrowserRouter, useLocation } from 'react-router-dom';
 import { useEffect, useState}  from 'react';
 
 const router = createBrowserRouter([
@@ -43,6 +43,16 @@ const router = createBrowserRouter([
   },
 ]);
 
+function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
+
 function Root() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('portfolio-theme') === 'dark' ? 'dark' : 'light';
@@ -61,6 +71,7 @@ function Root() {
   return (
     <>  
     <Header theme={theme} onToggleTheme={toggleTheme} />
+    <ScrollToTop />
       <main>
         <Outlet />
       </main>

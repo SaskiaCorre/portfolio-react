@@ -10,7 +10,7 @@ import ProjectPreview from '../components/ProjectPreview';
 
 const projectsPage = PAGES.projects;
 
-export default function Projects({project, previewImages}) { 
+export default function Projects() { 
 
   return (
     <article className='projects-page'>

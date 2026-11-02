@@ -89,6 +89,7 @@
     │   ├── Objectives <br />
     │   ├── ProjectPreview <br />
     │   ├── RightSidebar <br />
+    │   ├── ScrollToTop <br />
     │   └── Skills <br />
     │ <br />
     ├── data/ <br />

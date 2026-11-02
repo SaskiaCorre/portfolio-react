@@ -111,7 +111,8 @@
 .approach,
 .feature,
 .datamodel,
-.model, 
+.model,
+.deployment, 
 .gallery {
   padding: 5rem 0;
 }
@@ -121,6 +122,7 @@
 .feature-card,
 .datamodel-card,
 .model-card,
+.deployment-card,
 .skills,
 .challenges {
   background-color: var(--surface-alt);
@@ -159,7 +161,8 @@
 
 /* OBJECTIVES */
 
-.objective {
+.objective,
+.deployment {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -168,13 +171,15 @@
 .objectives-grid,
 .approach-grid,
 .features-grid, 
-.data-choices {
+.data-choices, 
+.deployment-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
-.objective-card {
+.objective-card, 
+.deployment-card {
   padding: 2rem;
 
   text-align: center;

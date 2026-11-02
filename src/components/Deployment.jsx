@@ -1,31 +1,37 @@
-export default function Deployment({title, description, steps}){
+export default function Deployment({deployment, deploymentCards}) {
     return (
     <div className="deployment">
-        {title && (
+        {deployment.title && (
             <h2 className="section-title">
-                {title}
+                {deployment.title}
             </h2>
         )}
-        {description && (   
+        {deployment.description && (   
             <p className="section-description">
-                {description}
+                {deployment.description}
             </p>
         )}
 
         <div className='deployment-grid'>
-            {steps.map((step) => (
-            <div key={step.title}
-                className='deployment-card'
-            >
-                {step.title && (
-                    <h3>{step.title}</h3>
+            {deploymentCards.map((deploymentCards) => {
+            const Icon = deploymentCards.icon;
+
+            return (
+                <div key={deploymentCards.title}
+                    className='deployment-card'
+                >
+                <Icon className="feature-icon" />
+                {deploymentCards.title && (
+                    <h3>{deploymentCards.title}</h3>
                 )}
-                {step.content && ( 
-                    <p>{step.content}</p>
+                {deploymentCards.description && ( 
+                    <p>{deploymentCards.description}</p>
                 )}
-            </div>
-            ))}      
+        </div>
+     );
+    })}      
         </div>
     </div>
+
     )
 }
