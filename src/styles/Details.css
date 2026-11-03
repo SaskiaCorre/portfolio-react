@@ -652,7 +652,7 @@
 @media (max-width: 768px) {
   /* Hero */
   .details-page .hero-layout {
-    padding: 3rem 1.25rem;
+    padding: 1rem 1.25rem;
   }
 
   .details-page .hero-title {

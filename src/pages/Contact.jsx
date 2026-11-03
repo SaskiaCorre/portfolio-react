@@ -27,9 +27,9 @@ export default function Contact() {
     setIsSending(true);
     setStatusMessage(null);
 
-    const SERVICE_ID = import.meta.env.production.VITE_EMAILJS_SERVICE_ID;
-    const TEMPLATE_ID = import.meta.env.production.VITE_EMAILJS_TEMPLATE_ID;
-    const PUBLIC_KEY = import.meta.env.production.VITE_EMAILJS_PUBLIC_KEY;
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     // Les clés de cet objet = {{variable}} de mon Template EmailJS
     const templateParams = {
