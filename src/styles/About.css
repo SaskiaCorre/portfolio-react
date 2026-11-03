@@ -84,4 +84,8 @@
   .about-page .page-list {
     margin-left: 1rem;
   }
+
+  .about-page .right-sidebar {
+    display: none;
+  }
 }

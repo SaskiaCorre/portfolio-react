@@ -198,7 +198,11 @@ padding: 0 1rem;
   }
 
   .home-page .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+  }
+
+  .home-page .hero-subtitle {
+    font-size: 2rem;
   }
 
   .home-page .hero-text {
@@ -221,4 +225,24 @@ padding: 0 1rem;
   .home-page .page-badges {
     padding: 1rem;
   }
+
+  .home-page .page-text,
+  .home-page .page-content {
+    width: 400px;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .project-preview {
+    grid-template-columns: 1fr;
+    width: min(400px, 90%);
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .preview-sidebar {
+    display: none;
+  }
+
 }
