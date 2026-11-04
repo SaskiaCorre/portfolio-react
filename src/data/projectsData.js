@@ -94,7 +94,8 @@ import {
   FaGit,
   FaEye,
   FaServer,
-  FaGlobe, 
+  FaGlobe,
+  FaEnvelope, 
 } from "react-icons/fa6";
 import { 
   FaUsersCog,
@@ -115,7 +116,7 @@ import { CiStar } from "react-icons/ci";
 import { SlArrowDown } from "react-icons/sl";
 import { IoMdGitNetwork } from "react-icons/io";
 import { AiOutlineDeploymentUnit } from "react-icons/ai";
-import { SiEsbuild } from "react-icons/si"; 
+import { SiVite, SiNetlify } from "react-icons/si"; 
 
 const PROJECTS = [
 // #############################
@@ -820,31 +821,46 @@ const PROJECTS = [
     ],
 
     deployment: {
-      title: "Déploiement",
-      description: "Première mise en production de l'application, de la génération du build jusqu'à son accessibilité sur Internet.",
+      title: "Déploiement et mise en production",
+      description: "De la génération du build à la publication sur Internet, ce projet m'a permis de découvrir et mettre en pratique les différentes étapes du déploiement d'une application React, de son versionnement à sa mise en ligne.",
     },
     
     deploymentCards: [
-        {
-          title: "Build de production",
-          description: "Génération du dossier dist avec Vite grâce à npm run build.",
-          icon: SiEsbuild,  
+      {
+        title: "Build de production",
+        description: "Compilation de l'application avec Vite grâce à npm run build, générant le dossier dist contenant les fichiers optimisés destinés à la production.",
+        icon: SiVite,  
       },
-        {
-          title: "Prévisualisation",
-          description: "Vérification du comportement du build en local avec npm run preview.",
-          icon: FaEye,
-        },
-        {
-          title: "Hébergement",
-         description:  "Mise en ligne des fichiers générés sur la plateforme d'hébergement choisie.",
-          icon: FaServer,
-        },
-        {
-          title: "Domaine et accès",
-          description: "Configuration du nom de domaine, du DNS, du HTTPS et des routes de l'application.",
-          icon: FaGlobe,
-        },
+      {
+    title: "Prévisualisation locale",
+    description: "Vérification du comportement de la version de production en local avec npm run preview avant sa publication.",
+    icon: FaEye,
+      },
+      {
+        title: "Versionnement avec Git et GitHub",
+        description: "Suivi des modifications, création de commits et envoi du code sur la branche main du dépôt GitHub afin de conserver un historique des évolutions.",
+        icon: FaGithub,
+      },
+      {
+        title: "Hébergement et déploiement continu",
+        description: "Connexion du dépôt GitHub à Netlify pour automatiser la compilation et la publication de l'application à chaque mise à jour de la branche principale.",
+        icon: SiNetlify,
+      },
+      {
+        title: "Gestion des routes React",
+        description: "Configuration d'une règle de redirection avec le fichier _redirects pour permettre l'accès direct aux fiches projets et éviter les erreurs 404 lors du rechargement des pages.",
+        icon: FaRoute,
+      },
+      {
+        title: "Configuration du formulaire EmailJS",
+        description: "Paramétrage des identifiants publics EmailJS pour la production et autorisation du domaine hébergé afin d'assurer l'envoi des messages depuis le formulaire de contact.",
+        icon: FaEnvelope,
+      },
+      {
+        title: "Nom de domaine et sécurisation HTTPS",
+        description: "Raccordement du nom de domaine personnalisé à Netlify par configuration DNS, puis activation du certificat HTTPS pour sécuriser l'accès au portfolio.",
+        icon: FaGlobe,
+      },
       ],
 
     dataModel: null,
