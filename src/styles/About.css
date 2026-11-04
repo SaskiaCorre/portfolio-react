@@ -79,6 +79,7 @@
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .about-page .page-content {
+    width: auto;
     padding: 2rem 1rem;
   }
 

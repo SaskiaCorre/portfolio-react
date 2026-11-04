@@ -112,6 +112,7 @@
   }
 
   .contact-page .page-badges {
+    display: block;
     padding: 1rem;
   }
   

@@ -225,7 +225,7 @@ padding: 0 1rem;
   }
 
   .home-page .page-content {
-    width: 200px;
+    width: auto;
     gap: 1.5rem;
     padding: 0 ;
     justify-content: center;
