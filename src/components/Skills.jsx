@@ -6,7 +6,7 @@ export default function Skills({skills}){
       <div className="skills">
         
         {skills.title && (
-          <h2 className="section-title">
+          <h2 className="card-title">
               {skills.title}
           </h2>
         )}

@@ -26,10 +26,13 @@
 }
 
 .contact-page .page-subtitle {
-  color: var(--bg-dark);
+  color: var(--text-main);
+  font-size: 2rem;
+  padding: 2rem 0;
 }
 
 .contact-page .page-badges {
+  display: flex;
   padding: 2rem;
 }
 
@@ -105,6 +108,10 @@
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .contact-page .page-content {
+    padding: 1rem;
+  }
+
+  .contact-page .page-badges {
     padding: 1rem;
   }
   

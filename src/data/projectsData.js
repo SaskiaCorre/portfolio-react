@@ -710,7 +710,7 @@ const PROJECTS = [
     image: routerSmall,
 
     hero: {
-      title: "www.saskiaPerriotMagnanou.com | Application React",
+      title: "saskiaperriot.fr | Site vitrine",
       subtitle: "Déployer une application évolutive et maintenable",
       badges: ["React", "JavaScript", "Responsive"],
       content: "Créer des composants réutilisables pour faire évoluer l'application sans risques de conflit de données",

@@ -211,10 +211,8 @@ padding: 0 1rem;
 
   .home-page .xp-container {
     grid-template-columns: 1fr;
-
     width: min(400px, 90%);
     gap: 1.5rem;
-
     padding: 2rem 0;
   } 
 
@@ -226,18 +224,18 @@ padding: 0 1rem;
     padding: 1rem;
   }
 
-  .home-page .page-text,
   .home-page .page-content {
-    width: 300px;
+    width: 200px;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 0 ;
     justify-content: center;
   }
 
-  .project-preview {
+  .project-preview,
+  .contact-preview {
     grid-template-columns: 1fr;
     width: min(400px, 90%);
-    padding: 1rem;
+    padding: 0;
     gap: 1.5rem;
   }
 

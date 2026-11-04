@@ -6,7 +6,7 @@ export default function Challenges({challenges}){
       <div className="challenges">
         
         {challenges.title && (
-          <h2 className="section-title">
+          <h2 className="card-title">
               {challenges.title}
           </h2>
         )}

@@ -158,7 +158,7 @@ a:hover {
     background: var(--bg-dark);
     color: white;
     padding: 4px 12px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 0.8rem;
 }
 
@@ -218,40 +218,40 @@ a:hover {
 
 /* RESPONSIVE TABLETTE */
 @media (max-width: 992px) {
-    header {
-        padding: 1rem;
-    }
-    .nav-container { 
-        gap: 0.5rem;
-    }
-    .nav-link {
+  header {
+    padding: 1rem;
+  }
+  .nav-container { 
+    gap: 0.5rem;
+  }
+  .nav-link {
     margin-right: 10px;
-    }
+  }
 }
 
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
-    header {
-        grid-template-columns: 1fr;
-        height: auto;
-        gap: 1rem;
-    }
+  header {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1rem;
+  }
 
-    .logo {
-        justify-self: center;
-    }
+  .logo {
+    justify-self: center;
+  }
 
-    .nav-container {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+  .nav-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    .nav-link {
-        margin-right: 0;
-    }
+  .nav-link {
+    margin-right: 0;
+  }
 
-    footer {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+  footer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }

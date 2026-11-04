@@ -3,9 +3,9 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
-  width: min(1200px, 90%);
+  width: min(1400px, 90%);
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0;
 
   background-color: var(--bg-light);
   color: var(--color-bg);
@@ -65,5 +65,10 @@
     width: min(400px, 90%);
     padding: 0;
     gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .card {
+    min-height: 300px;
   }
 }

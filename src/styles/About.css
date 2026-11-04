@@ -27,12 +27,13 @@
 }
 
 .about-page .page-subtitle {
-  color: var(--bg-dark);
+  color: var(--text-main);
   font-size: 2.2rem;
   padding: 2rem 0;
 }
 
 .about-page .page-badges {
+  display: flex;
   padding: 2rem;
 }
 
@@ -79,6 +80,10 @@
 @media (max-width: 768px) {
   .about-page .page-content {
     padding: 2rem 1rem;
+  }
+
+  .about-page .page-badges {
+    padding: 1rem;
   }
 
   .about-page .page-list {
